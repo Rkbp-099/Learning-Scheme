@@ -1,0 +1,12 @@
+(define (structure list1)
+(if (null? list1)
+list1
+(if (list? (car list1))
+(cons (structure (car list1)) (structure (cdr list1)))
+(structure (cdr list1))
+)
+)
+)
+(define (func list1 list2)
+(equal? (structure list1) (structure list2))
+)
