@@ -1,0 +1,10 @@
+(define (func lis1 lis2)
+    (cond
+        ((and (null? lis1) (null? lis2)) "true")
+        ((null? lis2) "false")
+        ((eq? (car lis1) (car lis2))
+            (func (cdr lis1) (cdr lis2))
+        )
+        (else "false")
+    )
+)
